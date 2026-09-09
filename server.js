@@ -1,11 +1,20 @@
 import http from 'http'
+import { obj } from './postController.js';
 
 
 const PORT = 8000;
 
+
 const server = http.createServer((req, res) => {
-    res.write('This is the running server')
-    res.end()
+    // res.write('This is the running server')
+    // res.setHeader('Content-Type','text/html')
+    // res.setHeader('Content-Type','application/json')
+    // res.statusCode(404)
+
+
+    res.writeHead(404, {'Content-Type': 'application/json'})
+    // res.end(`${obj.post}`)
+    res.end(JSON.stringify({messgae : "not found"}))
 })
 
 
