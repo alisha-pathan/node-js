@@ -14,7 +14,7 @@ const server = http.createServer((req, res) => {
 
     res.writeHead(404, {'Content-Type': 'application/json'})
     // res.end(`${obj.post}`)
-    res.end(JSON.stringify({messgae : "not found"}))
+    res.end(JSON.stringify({messgae : "Not Found"}))
 })
 
 
